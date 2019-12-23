@@ -10,7 +10,8 @@ weatherForm.addEventListener('submit', (e) => {
     const location = search.value
     fetch('/weather?address='+location).then ((response) => {
         response.json().then((data) => {
-        result.textContent = data.forecast.summary
+        console.log(data)
+        result.textContent = data.forecast
          })
     })
 })
